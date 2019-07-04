@@ -1,0 +1,58 @@
+/*主页样式*/
+
+@import 'common';
+
+#out-box {
+  height: 350px;
+}
+
+.component-box {
+  margin-top: 17%;
+  height: 200px;
+
+  & .create-box {
+    height: 50%;
+
+    & #create-btn {
+      margin-right: 3%;
+      font-size: 1em;
+    }
+  }
+
+  & .search-box {
+    height: 50%;
+
+    & #search-input {
+      margin-right: 3%;
+    }
+  }
+}
+
+@media (max-width: 576px) {
+
+  #out-box {
+    height: 500px;
+  }
+
+  .create-box {
+    height: 50%;
+
+    & #create-btn {
+      margin-right: 3%;
+      width: 80px;
+    }
+  }
+
+  .search-box {
+    height: 50%;
+
+    & #search-input {
+      margin-right: 3%;
+      width: 200px;
+    }
+
+    & #search-btn {
+      width: 80px;
+    }
+  }
+}

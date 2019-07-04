@@ -1,0 +1,56 @@
+/*弹框样式*/
+@import 'common';
+
+#alert-outbox {
+  position: fixed;
+  display: none;
+  width: 100%;
+  top: 100px;
+  z-index: 20000;
+
+  & #alert-box {
+    position: relative;
+    margin: auto;
+    margin: auto;
+    width: 350px;
+    height: 200px;
+    border: 1px solid #eee;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 5px 3px 5px;
+    
+    & #close-btn {
+      position: absolute;
+      right: 5px;
+      width: 20px;
+      height: 20px;
+  
+      &:hover {
+        cursor: pointer;
+        color: #333;
+      }
+    }
+  
+    & #alert-title {
+      padding-top: 5px;
+    }
+  
+    & #contract-id {
+      width: 100%;
+      height: 55%;
+      font-size: 1.3em;
+      border: 0;
+      outline: none;
+    }
+  
+    & #alert-btn {
+      margin-top: 2%;
+      width: 100%;
+      height: 20%;
+  
+      &:hover {
+        cursor: pointer;
+      }
+    }
+  }
+}

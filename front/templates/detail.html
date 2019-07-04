@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link href="{% static 'style/css/bootstrap.min.css' %}" rel="stylesheet">
+  <link href="{% static 'style/css/detail.css' %}" rel="stylesheet">
+  <title>合同详情</title>
+</head>
+<body>
+  <div class="container">
+    <div class="component-box container">
+      <div class="container contract-container">
+        <form class="contract-form form-group">
+          <div id='contract-box' class="m-auto">
+            <h2 id='contract-title' class="text-center">合同一</h2>
+            <div id="contract-content">
+              
+            </div>
+          {% if contract.signatureUrl_two %}
+          {% else %}
+              <p class="text-center">
+              <input id='isAgree' type="checkbox" />
+              同意签署合同
+            </p>
+          {% endif %}
+
+            <div id='signature-box' class="container">
+              <img id='old-signature' class="float-left" src=""/>
+                {% if contract.signatureUrl_two %}
+                     <img id='signature' class="float-right" src="{{ contract.signatureUrl_two }}"/>
+                    {% else %}
+                    <img id='signature' class="float-right" src="{% static 'images/click-sign.png' %}"/>
+                {% endif %}
+
+            </div>
+          </div>
+        {% if contract.signatureUrl_two %}
+        {% else %}
+            <input id="save-btn" class="btn btn-primary form-control m-auto col-sm-4" type="submit" value="保存"/>
+        {% endif %}
+
+        </form>
+      </div>
+    </div>
+  </div>
+  <div id='canvas-box'>
+    <canvas id='canvas' width="600px" height="300px"></canvas>
+    <div id='btn-box' class="m-auto container">
+      <button id='clear-btn' class="btn btn-primary form-control float-left">重置签名</button>
+      <button id='confirm-btn' class="btn btn-primary form-control float-left">确认签名</button>
+    </div>
+  </div>
+  <!--页脚-->
+  <div class="container">
+    <footer class="footer container">
+      <p class="text-center">Copyright &nbsp; No.14  &nbsp; group</p>
+    </footer>
+  </div>
+</body>
+<script src="{% static 'js/lib/jquery-3.3.1.js' %}"></script>
+<script src="{% static 'js/lib/wangEditor.js' %}"></script>
+<script src='{% static 'js/api/canvas.js' %}'></script>
+<script src='{% static 'js/api/url.js' %}'></script>
+<script src='{% static 'js/detail.js' %}'></script>
+</html>

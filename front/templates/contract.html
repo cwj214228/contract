@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link href="https://cdn.bootcss.com/twitter-bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
+  <link href="{% static 'style/css/contract.css' %}" rel="stylesheet">
+  <title>合同列表</title>
+</head>
+<body>
+  <div class="container">
+    <div class="component-box container">
+      <div class="container">
+        <ul class="nav nav-pills justify-content-center">
+          <li class="nav-item">
+            <span id='nav-item1' class="nav-link active text-white">合同一</span>
+          </li>
+          <li class="nav-item">
+            <span id='nav-item2' class="nav-link text-primary">合同一</span>
+          </li>
+          <li class="nav-item">
+            <span id='nav-item3' class="nav-link text-primary">合同一</span>
+          </li>
+        </ul>
+      </div>
+      <div class="container contract-container">
+        <form class="contract-form form-group">
+            {% csrf_token %}
+          <div id='contract-box' class="m-auto">
+            <h2 id='contract-title' class="text-center">合同一</h2>
+            <div id="contract-content">
+              
+            </div>
+            <p class="text-center">
+              <input id='isAgree' type="checkbox" />
+              同意签署合同
+            </p>
+            <div id='signature-box' class="container">
+              <img id='signature' class="float-left" src="{% static 'images/click-sign.png' %}"/>
+            </div>
+          </div>
+          <input id="save-btn" class="btn btn-primary form-control m-auto col-sm-4" type="submit" value="保存"/>
+        </form>
+      </div>
+    </div>
+  </div>
+  <div id='canvas-box'>
+    <canvas id='canvas' width="600px" height="300px"></canvas>
+    <div id='btn-box' class="m-auto container">
+      <button id='clear-btn' class="btn btn-primary form-control float-left">重置签名</button>
+      <button id='confirm-btn' class="btn btn-primary form-control float-left">确认签名</button>
+    </div>
+  </div>
+    <!--弹框-->
+  <div id='alert-outbox' class="container">
+    <div id='alert-box'>
+      <div id='close-btn'>X</div>
+      <h5 id='alert-title' class="text-center">合同号</h5>
+      <input id='contract-id' class="container" value="asda" readonly/>
+      <div id='alert-btn' class="container">
+        <button id='copy-btn' class='btn btn-primary float-right'>一键复制</button>
+      </div>
+    </div>
+  </div>
+  <!--页脚-->
+  <div class="container">
+    <footer class="footer container">
+      <p class="text-center">Copyright &nbsp; No.14  &nbsp; group</p>
+    </footer>
+  </div>
+</body>
+<script src="{% static 'js/lib/jquery-3.3.1.js' %}"></script>
+<script src="{% static 'js/lib/wangEditor.js' %}"></script>
+<script src="{% static 'js/api/canvas.js' %}"></script>
+<script src="{% static 'js/api/url.js' %}"></script>
+{#<script src="{% static 'js/api/nav.js' %}"></script>#}
+<script src="{% static 'js/contract.js' %}"></script>
+<script src="{% static 'js/lib/alertBox.js' %}"></script>
+</html>

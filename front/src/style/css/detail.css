@@ -1,0 +1,97 @@
+@charset "UTF-8";
+/*合同列表样式*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
+.m-auto {
+  display: block;
+  margin: auto; }
+
+.w-e-text-container {
+  height: 750px !important;
+  z-index: 1 !important; }
+
+/*页脚*/
+.footer {
+  margin: 5% auto 3% auto;
+  width: 100%;
+  color: #797979;
+  border-top: 1px solid #9c9c9c; }
+  .footer p {
+    margin-top: 2%; }
+
+@media (max-width: 576px) {
+  .w-e-text-container {
+    height: 500px !important;
+    z-index: 1 !important; } }
+.component-box {
+  margin-top: 5%; }
+  .component-box .contract-form {
+    position: relative;
+    border: 1px solid #eee; }
+    .component-box .contract-form #contract-box {
+      width: 80%;
+      height: 80%;
+      /*签名*/ }
+      .component-box .contract-form #contract-box #contract-content {
+        height: 800px;
+        border: 1px solid #eee;
+        overflow-y: scroll; }
+      @media (max-width: 576px) {
+        .component-box .contract-form #contract-box #contract-content {
+          height: 555px; } }
+      .component-box .contract-form #contract-box #signature-box {
+        margin: auto;
+        margin-top: 1%;
+        width: 500px;
+        height: 120px; }
+        .component-box .contract-form #contract-box #signature-box #old-signature {
+          width: 200px;
+          height: 100%;
+          border: 1px solid; }
+        .component-box .contract-form #contract-box #signature-box #signature {
+          width: 200px;
+          height: 100%;
+          border: 1px solid; }
+          .component-box .contract-form #contract-box #signature-box #signature:hover {
+            cursor: pointer; }
+    .component-box .contract-form #save-btn {
+      margin-top: 5% !important; }
+
+#canvas-box {
+  position: fixed;
+  width: 100%;
+  height: 340px !important;
+  top: 0;
+  height: 0;
+  display: none;
+  z-index: 100; }
+  #canvas-box #canvas {
+    display: block;
+    margin: auto;
+    background-color: #fff;
+    border: 1px solid; }
+  #canvas-box #btn-box {
+    width: 230px;
+    overflow: hidden; }
+  #canvas-box #clear-btn, #canvas-box #confirm-btn {
+    margin-top: 5px;
+    margin-left: 8px;
+    width: 90px; }
+
+@media (max-width: 576px) {
+  .contract-container {
+    padding: 0; }
+    .contract-container .contract-form {
+      width: 100%; }
+      .contract-container .contract-form #contract-box {
+        width: 100%; }
+        .contract-container .contract-form #contract-box #signature-box {
+          width: 300px;
+          height: 80px; }
+          .contract-container .contract-form #contract-box #signature-box #old-signature, .contract-container .contract-form #contract-box #signature-box #signature {
+            width: 100px; } }
+
+/*# sourceMappingURL=detail.css.map */

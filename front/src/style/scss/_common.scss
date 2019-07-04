@@ -1,0 +1,38 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  // border: 1px solid;
+}
+
+.m-auto {
+  display: block;
+  margin: auto;
+}
+
+.w-e-text-container {
+  height: 750px !important;
+  z-index: 1 !important;
+}
+
+/*页脚*/
+.footer {
+  margin: 5% auto 3% auto;
+  width: 100%;
+  color: #797979;
+  border-top: 1px solid #9c9c9c;
+
+  & p {
+    margin-top: 2%;
+  }
+}
+
+@media (max-width: 576px) {
+  .w-e-text-container {
+    height: 500px !important;
+    z-index: 1 !important;
+  }
+}

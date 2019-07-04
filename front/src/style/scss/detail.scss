@@ -1,0 +1,109 @@
+/*合同列表样式*/
+@import 'common';
+
+.component-box {
+  margin-top: 5%;
+
+  .contract-form {
+    position: relative;
+    border: 1px solid #eee;
+
+    & #contract-box {
+      width: 80%;
+      height: 80%;
+
+      & #contract-content {
+        height: 800px;
+        border: 1px solid #eee;
+        overflow-y: scroll;
+      }
+
+      @media (max-width: 576px) {
+        #contract-content {
+          height: 555px;
+        }
+      }
+
+      /*签名*/
+      & #signature-box {
+        margin: auto;
+        margin-top: 1%;
+        width: 500px;
+        height: 120px;
+
+        & #old-signature {
+          width: 200px;
+          height: 100%;
+          border: 1px solid;
+        }
+
+        & #signature {
+          width: 200px;
+          height: 100%;
+          border: 1px solid;
+
+          &:hover {
+            cursor: pointer;
+          }
+        }
+      }
+    }
+
+    & #save-btn {
+      margin-top: 5% !important;
+    }
+  }
+}
+
+#canvas-box {
+  position: fixed;
+  width: 100%;
+  height: 340px !important;
+  top: 0;
+  height: 0;
+  display: none;
+  z-index: 100;
+
+  & #canvas {
+    display: block;
+    margin: auto;
+    background-color: #fff;
+    border: 1px solid;
+  }
+
+  & #btn-box {
+    width: 230px;
+    overflow: hidden;
+  }
+
+  & #clear-btn,
+  & #confirm-btn {
+    margin-top: 5px;
+    margin-left: 8px;
+    width: 90px;
+  }
+}
+
+@media (max-width: 576px) {
+  .contract-container {
+    padding: 0;
+
+    & .contract-form {
+      width: 100%;
+
+      & #contract-box {
+        width: 100%;
+
+        & #signature-box {
+          width: 300px;
+          height: 80px;
+
+          & #old-signature,
+          & #signature {
+            width: 100px;
+          }
+        }
+      }
+    }
+  }
+}

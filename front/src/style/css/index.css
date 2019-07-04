@@ -1,0 +1,63 @@
+@charset "UTF-8";
+/*主页样式*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
+.m-auto {
+  display: block;
+  margin: auto; }
+
+.w-e-text-container {
+  height: 750px !important;
+  z-index: 1 !important; }
+
+/*页脚*/
+.footer {
+  margin: 5% auto 3% auto;
+  width: 100%;
+  color: #797979;
+  border-top: 1px solid #9c9c9c; }
+  .footer p {
+    margin-top: 2%; }
+
+@media (max-width: 576px) {
+  .w-e-text-container {
+    height: 500px !important;
+    z-index: 1 !important; } }
+#out-box {
+  height: 350px; }
+
+.component-box {
+  margin-top: 17%;
+  height: 200px; }
+  .component-box .create-box {
+    height: 50%; }
+    .component-box .create-box #create-btn {
+      margin-right: 3%;
+      font-size: 1em; }
+  .component-box .search-box {
+    height: 50%; }
+    .component-box .search-box #search-input {
+      margin-right: 3%; }
+
+@media (max-width: 576px) {
+  #out-box {
+    height: 500px; }
+
+  .create-box {
+    height: 50%; }
+    .create-box #create-btn {
+      margin-right: 3%;
+      width: 80px; }
+
+  .search-box {
+    height: 50%; }
+    .search-box #search-input {
+      margin-right: 3%;
+      width: 200px; }
+    .search-box #search-btn {
+      width: 80px; } }
+
+/*# sourceMappingURL=index.css.map */
